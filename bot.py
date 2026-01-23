@@ -19,7 +19,7 @@ from aiohttp import web
 TOKEN = os.getenv("DISCORD_TOKEN", "").strip()
 GUILD_ID = int(os.getenv("GUILD_ID", "0")) or None
 PORT = int(os.getenv("PORT", "8080"))
-BOT_STATUS = os.getenv("BOT_STATUS", "Asice Guard | help").strip()
+BOT_STATUS = os.getenv("BOT_STATUS", "Developed By Rispect").strip()
 
 AUTO_VOICE_CHANNEL_ID = int(os.getenv("AUTO_VOICE_CHANNEL_ID", "0")) or None
 PING_CHANNEL_ID = int(os.getenv("PING_CHANNEL_ID", "0")) or None
@@ -835,3 +835,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
