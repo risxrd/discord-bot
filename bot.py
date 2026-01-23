@@ -373,7 +373,7 @@ async def on_voice_state_update(member: discord.Member, before: discord.VoiceSta
             await send_log(f"🔊 Voice move | {member} | {before.channel} -> {after.channel}")
 
     # auto-leave when empty (bot leaves if alone)
-    if not feat("voice") or not config["voice"].get("auto_leave_empty", True):
+    if not feat("voice") or not config["voice"].get("auto_leave_empty", False):
         return
     vc = member.guild.voice_client
     if not vc or not vc.channel:
@@ -891,3 +891,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
